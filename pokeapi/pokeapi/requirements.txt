@@ -1,0 +1,9 @@
+Django>=4.0,<5.0
+djangorestframework  # Si estás usando Django REST Framework
+Pillow  # Si necesitas manipulación de imágenes (Generadas o procesadas)
+requests  # Para realizar solicitudes HTTP (Necesario para API)
+django-cors-headers  # Para manejar CORS si estás creando una API
+gunicorn  # Servidor WSGI para producción (Ejecucion)
+django-oauth-toolkit  # Para gestionar la autenticación OAuth2 en tu aplicación.
+djangorestframework-simplejwt  # Para trabajar con JSON Web Tokens (JWT) en la autenticación
+django-environ  # Para gestionar configuraciones de entorno de manera más segura (especialmente útil para manejar variables como API keys)

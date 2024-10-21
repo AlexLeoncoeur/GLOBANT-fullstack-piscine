@@ -1,0 +1,11 @@
+version: '3.8'  # Version de Docker Compose
+
+services:
+  web:  # Nombre del servicio
+    build: .  # Usar el Dockerfile en el directorio actual
+    ports:
+      - "8000:8000"  # Mapeo de puertos
+    volumes:
+      - .:/app  # Sincroniza el directorio actual con el contenedor
+    environment:
+      - DEBUG=True  # Configura la variable de entorno si es necesario
