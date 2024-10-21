@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 	'rest_framework',
 	'api',
+	'oauth2_provider',
 ]
 
 MIDDLEWARE = [
@@ -125,3 +126,16 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Rest_framework config
+REST_FRAMEWORK = {
+	'DEFAULT_AUTHENTIFICATION_CLASSES': (
+		'oauth2_provider.contrib.rest_framework.OAuth2Authentification',
+		
+    ),
+	'DEFAULT_PERMISSION_CLASSES': (
+		'rest_framework.permissions.IsAuthenticated',
+
+	),
+	
+}
