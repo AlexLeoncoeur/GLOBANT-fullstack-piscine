@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Mi Página{% endblock %}</title>
+    
+    <!-- Enlace a tus hojas de estilo -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    
+    <!-- Estilos básicos para diseño mobile-first -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 1em;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        main {
+            padding: 1em;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+        }
+        /* Media queries para pantallas más grandes */
+        @media (min-width: 768px) {
+            main {
+                max-width: 750px;
+                margin: auto;
+            }
+        }
+        @media (min-width: 1200px) {
+            main {
+                max-width: 1150px;
+                margin: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/">Inicio</a>
+        <a href="/about/">Acerca de</a>
+        <a href="/contact/">Contacto</a>
+    </nav>
+
+    <main>
+        {% block content %}
+        <!-- Aquí se insertará el contenido de cada página -->
+        {% endblock %}
+    </main>
+
+    <footer>
+        &copy; 2024 Mi Página - Todos los derechos reservados.
+    </footer>
+</body>
+</html>
