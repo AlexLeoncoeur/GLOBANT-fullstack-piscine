@@ -3,6 +3,9 @@
 {% block title %}Inicio{% endblock %}
 
 {% block content %}
-    <h1>Bienvenido a mi página</h1>
-    <p>Esta es una página de ejemplo con diseño mobile-first.</p>
+    <h1>Pokeapi</h1>
+    <p>A pokemon image ai powered generator.</p>
+    <a href="{% url 'login_with_oauth' %}">
+        <button>Login with OAuth2</button>
+    </a>
 {% endblock %}

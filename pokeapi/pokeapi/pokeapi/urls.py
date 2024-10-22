@@ -22,5 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 	path('', views.index, name='index'),
 	path('o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
-	
+	path('callback/', views.oauth_callback, name='oauth_callback'),
+    path('login/', views.login_with_oauth, name='login_with_oauth'),
 ]

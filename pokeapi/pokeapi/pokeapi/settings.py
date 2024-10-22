@@ -51,6 +51,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'oauth2_provider.middleware.OAuth2TokenMiddleware',
 ]
 
 ROOT_URLCONF = 'pokeapi.urls'
@@ -139,3 +140,12 @@ REST_FRAMEWORK = {
 	),
 	
 }
+
+OAUTH2_PROVIDER = {
+	'SCOPES': {
+		'read': 'Read access',
+		'write': 'Write access',
+		
+    }
+}
+
